@@ -3,6 +3,7 @@ from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
 
+
 app = Flask(__name__)
 
 class_names = ['agricultural', 'airplane', 'baseballdiamond', 'beach', 'buildings', 'chaparral', 'denseresidential', 'forest', 'freeway', 'golfcourse', 'harbor', 'intersection', 'mediumresidential', 'mobilehomepark', 'overpass', 'parkinglot', 'river', 'runway', 'sparseresidential', 'storagetanks', 'tenniscourt']
