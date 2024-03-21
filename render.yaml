@@ -1,5 +1,6 @@
 services:
-  - name: landusecontainer
+  - type: web
+    name: landusecontainer
     env: python
     buildCommand: docker build -t marvin .
     startCommand: docker run -p 5000:5000 landusecontainer
