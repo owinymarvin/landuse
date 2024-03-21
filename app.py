@@ -3,7 +3,6 @@ from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
 
-
 app = Flask(__name__)
 
 class_names = ['agricultural', 'airplane', 'baseballdiamond', 'beach', 'buildings', 'chaparral', 'denseresidential', 'forest', 'freeway', 'golfcourse', 'harbor', 'intersection', 'mediumresidential', 'mobilehomepark', 'overpass', 'parkinglot', 'river', 'runway', 'sparseresidential', 'storagetanks', 'tenniscourt']
@@ -48,7 +47,8 @@ def get_output():
         img.save(img_path)
         p = predict_label(img_path)
         
-    return render_template("index.html", prediction=p, img_path=img_path)
+        return render_template("index.html", prediction=p, img_path=img_path)
+    return render_template("index.html")
 
 if __name__ =='__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
